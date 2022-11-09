@@ -1,3 +1,16 @@
+# Cazando APIs en aplicaciones mobiles
+
+## Prerequisitos
+
+### Celular android
+  Cualquier celular android con la apliacion que deseas analizar instalada
+  
+### APPs
+  1. [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb)
+  2. [Mobile Security Framework (MobSF)](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
+  3. [Advance Rest Client](https://install.advancedrestclient.com/)
+
+
 ## Pasos para conectar tu Android a ADB por WiFi (sin root)
 
 1. Anota la dirección IP de tu Android que la puedes encontrar en Ajustes > Acerca del teléfono > Estado > Dirección IP.

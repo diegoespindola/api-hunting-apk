@@ -37,7 +37,7 @@
 7. Ya puedes desconectar el cable USB que conecta a tu Android con el PC.
 8. Desde el ordenador, envía el siguiente comando: adb devices. Si todo ha salido bien, recibirás este mensaje: List of devices attached [La IP de tu Android]:5555 device.
 
-#### Listar kas apk instaladas en tu telefono
+#### Listar las apk instaladas en tu telefono
 ```shell
   adb shell pm list packages
 ```

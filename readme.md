@@ -20,8 +20,13 @@
 ## Conseguir la apk instalada en tu telefono para su analisis
   Hay 2 opciones, con ADB y con Apk Analizer
 
-
-### Pasos para conectar tu Android a ADB por WiFi (sin root)
+### Obtener la apk con ADB
+  1. Conectar el telefono con adb
+  2. listar las apk instaladas en el telefono
+  3. ruta de la apk
+  4. descargar apk
+  
+#### Pasos para conectar tu Android a ADB por WiFi (sin root)
 
 1. Anota la dirección IP de tu Android que la puedes encontrar en Ajustes > Acerca del teléfono > Estado > Dirección IP.
 2. Activa la depuración USB de tu Android.
@@ -32,3 +37,18 @@
 7. Ya puedes desconectar el cable USB que conecta a tu Android con el PC.
 8. Desde el ordenador, envía el siguiente comando: adb devices. Si todo ha salido bien, recibirás este mensaje: List of devices attached [La IP de tu Android]:5555 device.
 
+#### Listar kas apk instaladas en tu telefono
+```shell
+  adb shell pm list packages
+```
+adb shell pm list packages
+
+#### obtener la ruta de la apk a descargar
+```shell
+adb shell pm path com.example.someapp
+```
+
+#### descargar apk
+```shell
+adb pull /data/app/com.example.someapp-2.apk path/to/desired/destination
+```

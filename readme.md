@@ -4,8 +4,12 @@
 
 ### Celular android
   Cualquier celular android con la apliacion que deseas analizar instalada
+
+### Cable usb
+  cable usb para conectar tu celular android al computador
   
-### APPs
+### APPs (deben esar instaladas previamente en el computador)
+
 #### Para obtener la apk
   1. [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb)
   2. [Apk Analyzer](https://play.google.com/store/apps/details?id=sk.styk.martin.apkanalyzer)
@@ -13,10 +17,13 @@
   1. [Mobile Security Framework (MobSF)](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
 #### Para consumir la api encontrada
   1. [Advance Rest Client](https://install.advancedrestclient.com/)
-  
-### Aplicaciones a analizar
+#### Para analizar el trafico web de la apk
+  1. [Mitmproxy](https://mitmproxy.org/)
+  2. [Genymotion](https://www.genymotion.com/download/)
+### Aplicaciones a analizar (instaladas en tu telefono android)
   1. [Edad por rut](https://play.google.com/store/apps/details?id=app.details.nacimientoporrut)
-
+  2. [Rutificador Chile](https://play.google.com/store/apps/details?id=app.details.rutificadorapp)
+  
 ## Conseguir la apk instalada en tu telefono para su analisis
   Hay 2 opciones, con ADB y con Apk Analizer
 
@@ -43,12 +50,32 @@
 ```
 adb shell pm list packages
 
-#### obtener la ruta de la apk a descargar
+#### Obtener la ruta de la apk a descargar
 ```shell
 adb shell pm path com.example.someapp
 ```
 
-#### descargar apk
+#### Descargar apk
 ```shell
 adb pull /data/app/com.example.someapp-2.apk path/to/desired/destination
+```
+
+#### Instalar apk
+```shell
+adb install com.example.someapp-2.apk 
+```
+
+#### Subir archivo (certificado) 
+```shell
+adb push mitmproxy-ca-cert.cer /sdcard/certs/mitmproxy-ca-cert.cer
+```
+
+#### Habilitar proxy
+```shell
+adb shell settings put global http_proxy 192.168.1.5:8080
+```
+
+#### Deshabilitar proxy
+```shell
+adb shell settings put global http_proxy :0 
 ```

@@ -1,4 +1,4 @@
-# Cazando APIs en aplicaciones mobiles
+# Cazando APIs en aplicaciones Android
 
 ## Prerequisitos
 

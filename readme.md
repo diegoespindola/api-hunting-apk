@@ -1,5 +1,6 @@
 # Cazando APIs en aplicaciones Android
-
+Taller día Sabado 19 de noviembre 2022 a las 14:00 hrs via streaming por [LockDown Fest](https://www.linkedin.com/company/lockdown0x0/)
+Registrate en [Eventbrite](https://www.eventbrite.cl/e/talleres-lockdown-fest-2022-techsec-tickets-436646149387)
 ## Prerequisitos
 
 ### Celular android

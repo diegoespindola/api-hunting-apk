@@ -61,6 +61,11 @@ adb shell pm path com.example.someapp
 adb pull /data/app/com.example.someapp-2.apk path/to/desired/destination
 ```
 
+#### Descargar apk spliteada
+```shell
+adb shell pm path com.example.myapp | sed 's/^package://g' | xargs -L1 adb pull 
+```
+
 #### Instalar apk
 ```shell
 adb install com.example.someapp-2.apk 
